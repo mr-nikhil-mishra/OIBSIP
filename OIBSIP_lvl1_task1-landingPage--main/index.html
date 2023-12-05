@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LandingPage</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+    <body>
+        <header>
+        <a href="#" class="logo">MOON</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#sec">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Moon Light</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Moon Light Lamp</h2>
+            <p>
+                Eco Material: The moon night light is made by 3D technology with eco-friendly materials(PLA)<br><br>
+                Perfect For Gift: Moon Lamp It is not only a lamp, it is a natural artwork, succinct and beautiful. Fit for any occasion you like. it can directly delivery to parents, kids, family members or friends as a gift. Perfect gift for child(kids) woman, friends at holiday or Diwali Gift, Christmas gift, birthday present, housewarming gift.<br><br>
+                Moon Lamp Built: In rechargeable battery provides 4-20 hours illumination depending on brightness. Standard USB charging port for PC, charger and mobile devices, etc. USB-chargeable for use anytime, anywhere. The cordless table lamps make it convenient for outdoor and home decoration.<br><br>
+                A Creative Decoration: Moon Lamp A creative decorative night light for home, kids bedroom, living room, dining room, office, college dorm and create a wonderful atmosphere beyond your expectations.<br><br>
+                Easy Operation: Plug-in the USB cable and charge 10 seconds to active the moon lamp, when it is activated, tap the product's surface and the light will be turned on and change colors.<br><br>
+            </p>
+            <a href="#" id="btn2">Order Now</a>
+        </div>
+
+        <section id="contact" class="contact"> 
+            <div class="main-text"> 
+                <span>Any question</span> 
+                <h2>Contact Me</h2> 
+            </div> 
+            <form action="#"> 
+                <input type="text" placeholder="Your Name"> 
+                <input type="text" placeholder="Your Email"> 
+                <input type="text" placeholder="Your Address"> 
+                <input type="number" placeholder="Phone Number"> 
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <div class="btn-box formBtn"> 
+                    <button type="submit" class="btn">Send Message</button> 
+                </div>
+            </form>
+        </section>
+
+
+
+
+
+
+        <script>
+            let starts = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll',function(){
+                let value = window.scrollY;
+                stars.style.left = value*0.25 +'px';
+                moon.style.top = value*1.05 +'px';
+                mountains_behind.style.top = value*0.5 +'px';
+                mountains_front.style.top = value*0 +'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 +'px';
+            })
+        </script>
+    </body>
+</html>
